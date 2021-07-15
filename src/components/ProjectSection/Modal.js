@@ -14,6 +14,11 @@ const Background = styled.div`
   justify-content: center;
   align-items: center;
   left: 10px;
+
+  @media screen and (max-width: 450px) {
+    transform: scale(0.9, 0.9);
+    width: 95%;
+  }
 `;
 
 const ModalWrapper = styled.div`

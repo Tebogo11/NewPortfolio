@@ -38,6 +38,7 @@ export const Textarea = styled.textarea`
   border: none;
   height: 140px;
   width: 420px;
+  color: white;
   margin-top: 3px;
   margin-bottom: 10px;
   background-color: #292929;

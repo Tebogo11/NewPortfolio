@@ -43,13 +43,13 @@ const ImageContainer = styled.div`
 
     &:hover {
       box-shadow: 0px 2px 6px #292929;
-      transform: scale(1.1, 1.1); /* IE 9 */
+      transform: scale(1.06, 1.06); /* IE 9 */
 
       border: 1px solid #5be0e0;
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 450px) {
     transform: scale(0.9, 0.9);
   }
 
