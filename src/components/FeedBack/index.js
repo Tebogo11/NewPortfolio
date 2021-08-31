@@ -29,19 +29,36 @@ const FeedBack = () => {
   return (
     <FeedbackContainer>
       <div>
-        <FeedbackCard onClick={() => setreview("Excellent")}>
+        <FeedbackCard
+          style={{ marginLeft: review === "Excellent" ? -15 : 0 }}
+          onClick={() => setreview("Excellent")}
+        >
           <p> &#128526; Excellent</p>
         </FeedbackCard>
-        <FeedbackCard onClick={() => setreview("Good")}>
+        <FeedbackCard
+          style={{ marginLeft: review === "Good" ? -15 : 0 }}
+          onClick={() => setreview("Good")}
+        >
           <p> &#128512; Good</p>
         </FeedbackCard>
-        <FeedbackCard onClick={() => setreview("Average")}>
+        <FeedbackCard
+          style={{ marginLeft: review === "Average" ? -15 : 0 }}
+          onClick={() => setreview("Average")}
+        >
           <p> &#128528; Average</p>
         </FeedbackCard>
-        <FeedbackCard onClick={() => setreview("Not that Good")}>
+        <FeedbackCard
+          style={{ marginLeft: review === "Not that Good" ? -15 : 0 }}
+          onClick={() => setreview("Not that Good")}
+        >
           <p> &#128530; Not that Good</p>
         </FeedbackCard>
-        <FeedbackCard onClick={() => setreview("Could use some more work")}>
+        <FeedbackCard
+          style={{
+            marginLeft: review === "Could use some more work" ? -15 : 0,
+          }}
+          onClick={() => setreview("Could use some more work")}
+        >
           <p> &#128531; Could use some more work</p>
         </FeedbackCard>
       </div>
@@ -51,6 +68,7 @@ const FeedBack = () => {
           placeholder="Please write any extra information, that can help me improve this site"
           onChange={(e) => setmessage(e.target.value)}
         />
+
         {sent ? (
           <Thankyou>Thank you</Thankyou>
         ) : (

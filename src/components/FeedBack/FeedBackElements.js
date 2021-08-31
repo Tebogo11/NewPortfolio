@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const FeedbackContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const FeedbackCard = styled.div`

@@ -30,6 +30,7 @@ const ImageContainer = styled.div`
   transition: all 0.3s ease;
   background-image: url(${({ imageUrl }) => imageUrl});
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   &:hover {
     box-shadow: 0px 2px 6px black;

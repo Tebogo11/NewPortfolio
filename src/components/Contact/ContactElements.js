@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  width: 95%;
+`;
+
 export const FormContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  max-width: 400px;
   grid-auto-columns: 200px;
+  width: 100%;
 `;
 
 export const Input = styled.input`
@@ -23,13 +27,14 @@ export const Input = styled.input`
   }
 
   &.Input1 {
-    width: 200px;
+    width: 100%;
   }
   &.Input2 {
-    width: 200px;
+    width: 100%;
   }
   &.Input3 {
-    width: 420px;
+    width: 66%;
+
     grid-column: 1/-1;
   }
 `;
@@ -37,7 +42,7 @@ export const Input = styled.input`
 export const Textarea = styled.textarea`
   border: none;
   height: 140px;
-  width: 420px;
+  width: 100%;
   color: white;
   margin-top: 3px;
   margin-bottom: 10px;

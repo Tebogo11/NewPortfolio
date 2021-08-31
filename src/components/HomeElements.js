@@ -20,8 +20,8 @@ export const TitleH1 = styled.h1`
     line-height: 0px;
   }
 
-  @media screen and (max-width: 312px) {
-    font-size: 30px;
+  @media screen and (max-width: 450px) {
+    font-size: 35px;
     line-height: 0px;
   }
 `;
@@ -29,7 +29,6 @@ export const TitleH1 = styled.h1`
 export const HomeDiv = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 
   @media screen and (max-width: 830px) {
     margin-top: 30px;
@@ -41,14 +40,6 @@ export const HomeDiv = styled.div`
     justify-content: center;
     align-items: center;
   }
-
-  @media screen and (max-width: 540px) {
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -40px;
-  }
 `;
 
 export const SubTitle = styled.h2`
@@ -57,11 +48,11 @@ export const SubTitle = styled.h2`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 100;
   font-size: 24px;
-  margin-left: 15px;
-  margin-top: -10px;
+  margin-left: -5px;
+  margin-top: 10px;
 
   @media screen and (max-width: 540px) {
     text-align: center;
-    font-size: 23px;
+    font-size: 18px;
   }
 `;

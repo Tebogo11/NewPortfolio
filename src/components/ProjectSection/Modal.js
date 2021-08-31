@@ -37,7 +37,7 @@ const ModalWrapper = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     width: 80%;
-    height: 80%;
+    height: 95%;
   }
 `;
 
@@ -56,7 +56,7 @@ const ModalContent = styled.div`
   margin: 10px;
 
   &::-webkit-scrollbar {
-    width: 0.5em;
+    width: 10px;
   }
 
   &::-webkit-scrollbar-track {
@@ -174,8 +174,6 @@ const Modal = ({ showModal, setShowModal, project }) => {
           <ModalWrapper showModal={showModal}>
             <ModalVideo
               src={project.videoUrl}
-              width="600"
-              height="800"
               controls="controls"
               autoplay="true"
               muted

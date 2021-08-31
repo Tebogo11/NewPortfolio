@@ -15,7 +15,6 @@ const Home = () => {
           <Blast string="Tebogo," color="white" />
         </div>
       </TitleH1>
-
       <TitleH1>
         <div style={{ display: "flex", flexDirection: "row" }}>
           <Blast string="web developer" color="white" />

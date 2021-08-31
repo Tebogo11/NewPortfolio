@@ -10,6 +10,7 @@ import {
   AlertError,
   ButtonContainer,
   LoadingCircle,
+  Container,
 } from "./ContactElements";
 
 import Button from "../Button";
@@ -52,7 +53,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div>
+    <Container>
       {isSent ? (
         <AlertSuccess>Your email was successfully,</AlertSuccess>
       ) : noError ? (
@@ -144,7 +145,7 @@ const ContactForm = () => {
           </ButtonContainer>
         )}
       </form>
-    </div>
+    </Container>
   );
 };
 
