@@ -1,4 +1,6 @@
 import "./App.css";
+import { ThemeProvider } from "styled-components";
+import { color } from "./constants/Colors";
 //react-route
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //Navigation
@@ -12,18 +14,20 @@ import Projects from "./pages/Projects";
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navigation />
-        <div className="body">
-          <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/about" component={About} exact />
-            <Route path="/presentations" component={Presentation} exact />
-            <Route path="/contact" component={Contact} exact />
-            <Route path="/projects" component={Projects} exact />
-          </Switch>
+      <ThemeProvider theme={color}>
+        <div className="App">
+          <Navigation />
+          <div className="body">
+            <Switch>
+              <Route path="/" component={Home} exact />
+              <Route path="/about" component={About} exact />
+              <Route path="/presentations" component={Presentation} exact />
+              <Route path="/contact" component={Contact} exact />
+              <Route path="/projects" component={Projects} exact />
+            </Switch>
+          </div>
         </div>
-      </div>
+      </ThemeProvider>
     </Router>
   );
 }

@@ -1,10 +1,13 @@
 import React from "react";
 import "./Button.css";
+import { Button, ButtonContainer } from "./ButtonElement";
 const ButtonComponent = ({ title, onClickAction }) => {
   return (
-    <div id="seventh" className="buttonBox">
-      <button onClick={onClickAction}>{title}</button>
-    </div>
+    <ButtonContainer>
+      <Button className="Button" onClick={onClickAction}>
+        {title}
+      </Button>
+    </ButtonContainer>
   );
 };
 

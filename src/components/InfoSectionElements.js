@@ -18,16 +18,15 @@ export const InfoRow = styled.div`
 `;
 
 export const Column1 = styled.div.attrs({
-  className: "animate__animated animate__slideInLeft",
+  className: "animate__animated animate__slideInDown",
 })`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
-  max-width: 100%;
 `;
 
 export const Column2 = styled.div.attrs({
-  className: "animate__animated animate__slideInRight",
+  className: "animate__animated animate__slideInUp",
 })`
   margin-bottom: 15px;
   padding: 0 15px;
@@ -37,16 +36,17 @@ export const Column2 = styled.div.attrs({
 export const InfoContainer = styled.div`
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 40px;
 `;
 
 export const Ptag = styled.p`
-  font-size: 2px;
   text-align: justify;
-  font-family: "Poppins", sans-serif;
-  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: ${(props) => props.theme.secondary};
 
   @media screen and (min-width: 831px) {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 30px;
   }
 

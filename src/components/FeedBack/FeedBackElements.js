@@ -3,22 +3,24 @@ import styled from "styled-components";
 export const FeedbackContainer = styled.div`
   display: flex;
   flex-direction: row;
+  width: 40%;
 `;
 
 export const FeedbackCard = styled.div`
-  color: black;
+  color: ${(props) => props.theme.tertiary};
   font-size: 16px;
   display: flex;
   flex-direction: column;
 
   p {
-    font-family: "Rubik ", cursive;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     width: 255px;
-    text-align: center;
+
     padding: 7px;
     padding-right: 10px;
     border-radius: 10px;
-    background-color: aqua;
+    border: 1px solid ${(props) => props.theme.tertiary};
     box-shadow: 0px 4px 12px black;
   }
 
@@ -57,8 +59,8 @@ export const Thankyou = styled.h1`
 `;
 
 export const Reviewmsg = styled.p`
-  color: white;
-  border-bottom: 1px solid #ff1616;
+  color: ${(props) => props.theme.primary};
+  border-bottom: 1px solid ${(props) => props.theme.secondary};
   text-align: center;
   font-size: 18px;
   font-weight: bold;

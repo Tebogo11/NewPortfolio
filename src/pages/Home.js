@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <HomeDiv>
       <TitleH1>
-        <Blast string="Hi," color="white" />
+        <Blast string="Hello," color="white" />
       </TitleH1>
       <TitleH1>
         <div style={{ display: "flex", flexDirection: "row" }}>
@@ -15,12 +15,16 @@ const Home = () => {
           <Blast string="Tebogo," color="white" />
         </div>
       </TitleH1>
+
       <TitleH1>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <Blast string="A Web Developer" color="white" />
+          <Blast string="web developer" color="white" />
         </div>
       </TitleH1>
-      <SubTitle>JavaScript Developer / PHP Developer / ReactJS Expert</SubTitle>
+      <SubTitle>
+        JavaScript Developer | ReactJS Developer| React Native Developer | MERN
+        Expert
+      </SubTitle>
       <NavLink to="/contact" style={{ marginLeft: "15px" }}>
         <Button title="Contact Me" />
       </NavLink>

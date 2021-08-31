@@ -1,6 +1,5 @@
 import React from "react";
 import Blast from "../components/Blast";
-import { TitleH1 } from "../components/HomeElements";
 import {
   InfoRow,
   Column1,
@@ -11,15 +10,15 @@ import {
 } from "../components/InfoSectionElements";
 //Certifcate Component
 import Certifcations from "../components/Certifcations";
-
+import { color } from "../constants/Colors";
 const About = () => {
   return (
     <InfoContainer>
-      <TitleH1>
-        <Blast string="About Me" color="#51c8cc" />
-      </TitleH1>
       <InfoRow imgStart={false}>
-        <Column1>
+        <Column1 style={{ marginBottom: 70 }}>
+          <h1>
+            <Blast string="About Me" color={color.primary} />
+          </h1>
           <Ptag>
             I recently graduated from{" "}
             <Keypoints>

@@ -1,5 +1,4 @@
 import Blast from "../components/Blast";
-import { TitleH1 } from "../components/HomeElements";
 import {
   InfoRow,
   Column1,
@@ -8,6 +7,7 @@ import {
 } from "../components/InfoSectionElements";
 import ContactForm from "../components/Contact/ContactForm";
 import FeedBack from "../components/FeedBack";
+import { color } from "../constants/Colors";
 
 import { Reviewmsg } from "../components/FeedBack/FeedBackElements";
 const Contact = () => {
@@ -15,15 +15,15 @@ const Contact = () => {
     <InfoContainer>
       <InfoRow>
         <Column1>
-          <TitleH1>
-            <Blast string="Contact Me" color="#51c8cc" />
-          </TitleH1>
+          <h1>
+            <Blast string="Contact Me" color={color.primary} />
+          </h1>
           <ContactForm />
         </Column1>
         <Column2>
-          <TitleH1>
-            <Blast string="FeedBack" color="#51c8cc" />
-          </TitleH1>
+          <h1>
+            <Blast string="FeedBack" color={color.primary} />
+          </h1>
           <Reviewmsg>
             Please leave a quick review of what you think of my online portfolio{" "}
           </Reviewmsg>

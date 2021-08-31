@@ -1,13 +1,13 @@
 import React from "react";
 import ProjectCard from "../components/ProjectSection/ProjectCard";
 import Blast from "../components/Blast";
-import { TitleH1 } from "../components/HomeElements";
+import { color } from "../constants/Colors";
 const Projects = () => {
   return (
     <div>
-      <TitleH1 style={{ marginBottom: "70px", textAlign: "center" }}>
-        <Blast string="Projects" color="#51c8cc" />
-      </TitleH1>
+      <h1 style={{ textAlign: "center" }}>
+        <Blast string="Projects" color={color.primary} />
+      </h1>
       <ProjectCard />
     </div>
   );

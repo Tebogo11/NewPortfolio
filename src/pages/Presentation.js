@@ -1,6 +1,5 @@
 import React from "react";
 import Blast from "../components/Blast";
-import { TitleH1 } from "../components/HomeElements";
 import {
   InfoRow,
   Column1,
@@ -10,13 +9,13 @@ import {
 import { SubTitle, ImageContainer } from "../components/PresentationElements";
 import DockerPresentation from "../images/PresentationDocker.PNG";
 import GitHubPresentation from "../images/PresentationGitHub.PNG";
-
+import { color } from "../constants/Colors";
 const Presentation = () => {
   return (
     <InfoContainer>
-      <TitleH1>
-        <Blast string="Presentation" color="#51c8cc" />
-      </TitleH1>
+      <h1 className="animate__animated animate__slideInLeft">
+        <Blast string="Presentation" color={color.primary} />
+      </h1>
       <InfoRow imgStart={false} className="PresentationContainer">
         <Column1>
           <SubTitle>Docker</SubTitle>

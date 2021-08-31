@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SubTitle = styled.h1`
   font-size: 24px;
-  color: #ff1616;
+  color: ${(props) => props.theme.tertiary};
 `;
 
 export const ImageContainer = styled.div`
@@ -19,7 +19,7 @@ export const ImageContainer = styled.div`
   transition: all 0.3s ease;
 
   &:hover {
-    box-shadow: 0px 2px 6px aqua;
+    box-shadow: 0px 2px 6px black;
     -ms-transform: scale(1.05, 1.05); /* IE 9 */
     transform: scale(1.05, 1.05); /* Standard syntax */
   }

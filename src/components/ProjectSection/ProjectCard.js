@@ -32,25 +32,26 @@ const ImageContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   &:hover {
-    box-shadow: 0px 2px 6px #292929;
+    box-shadow: 0px 2px 6px black;
     -ms-transform: scale(1.05, 1.05); /* IE 9 */
     transform: scale(1.05, 1.05); /* Standard syntax */
-    border: 1px solid #5be0e0;
+    border: 1px solid black;
   }
 
-  @media screen and (min-width: 400px) and (max-width: 769px) {
-    transform: scale(1.05, 1.05);
+  @media screen and (min-width: 451px) and (max-width: 769px) {
+    width: 85%;
 
     &:hover {
-      box-shadow: 0px 2px 6px #292929;
-      transform: scale(1.06, 1.06); /* IE 9 */
-
-      border: 1px solid #5be0e0;
+      transform: scale(1.08, 1.08); /* IE 9 */
     }
   }
 
   @media screen and (max-width: 450px) {
-    transform: scale(0.9, 0.9);
+    width: 85%;
+
+    &:hover {
+      transform: scale(1.08, 1.08); /* IE 9 */
+    }
   }
 
   display: flex;
@@ -64,8 +65,8 @@ const ImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #5be0e0;
-    height: 100px;
-    border-radius: 50%;
+    height: 30;
+    border-radius: 5%;
   }
 
   h1 {
@@ -93,16 +94,15 @@ const ProjectCard = () => {
     <ProjectContainer>
       {ProjectData.map((project, key) => {
         return (
-          <div
+          <ImageContainer
+            key={key}
+            imageUrl={project.imageUrl}
             onClick={() => openModal(key)}
-            className="animate__animated animate__pulse"
           >
-            <ImageContainer key={key} imageUrl={project.imageUrl}>
-              <div>
-                <h1>{project.title}</h1>
-              </div>
-            </ImageContainer>
-          </div>
+            <div>
+              <h1>{project.title}</h1>
+            </div>
+          </ImageContainer>
         );
       })}
       <Modal

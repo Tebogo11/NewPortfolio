@@ -6,14 +6,13 @@ import { MdClear } from "react-icons/md";
 const Background = styled.div`
   width: 100%;
   height: 100%;
-
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   display: flex;
-  top: 10px;
-
+  top: 0px;
   justify-content: center;
   align-items: center;
-  left: 10px;
+  left: 0px;
 
   @media screen and (max-width: 450px) {
     transform: scale(0.9, 0.9);
@@ -34,11 +33,11 @@ const ModalWrapper = styled.div`
   border-radius: 10px;
   padding: 10px;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
-    width: 600px;
-    height: 600px;
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    height: 80%;
   }
 `;
 
