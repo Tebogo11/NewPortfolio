@@ -6,8 +6,8 @@ export const Container = styled.div`
 
 export const FormContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
   grid-auto-columns: 200px;
   width: 100%;
 `;
@@ -33,7 +33,7 @@ export const Input = styled.input`
     width: 100%;
   }
   &.Input3 {
-    width: 66%;
+    width: 100%;
 
     grid-column: 1/-1;
   }
@@ -44,7 +44,6 @@ export const Textarea = styled.textarea`
   height: 140px;
   width: 100%;
   color: white;
-  margin-top: 3px;
   margin-bottom: 10px;
   background-color: #292929;
   grid-column: 1/3;

@@ -6,7 +6,7 @@ export const TitleH1 = styled.h1`
   transform: all 0.8s ease-in-out;
 
   @media screen and (max-width: 880px) {
-    font-size: 90px;
+    font-size: 80px;
     line-height: 0px;
   }
 
@@ -48,10 +48,9 @@ export const SubTitle = styled.h2`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 100;
   font-size: 24px;
-  margin-left: -5px;
-  margin-top: 10px;
+  margin: 10px;
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 740px) {
     text-align: center;
     font-size: 18px;
   }

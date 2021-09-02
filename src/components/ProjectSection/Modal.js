@@ -13,16 +13,11 @@ const Background = styled.div`
   justify-content: center;
   align-items: center;
   left: 0px;
-
-  @media screen and (max-width: 450px) {
-    transform: scale(0.9, 0.9);
-    width: 95%;
-  }
 `;
 
 const ModalWrapper = styled.div`
-  width: 1100px;
-  height: 500px;
+  width: 80%;
+  height: 95%;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background-color: #202020;
   color: aqua;
@@ -33,11 +28,14 @@ const ModalWrapper = styled.div`
   border-radius: 10px;
   padding: 10px;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 80%;
-    height: 95%;
+  }
+
+  @media screen and (max-height: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 `;
 
@@ -45,6 +43,14 @@ const ModalVideo = styled.video`
   width: 100%;
   height: 100%;
   background: #000;
+
+  @media screen and (max-width: 999px) {
+    height: 50vh;
+  }
+
+  @media screen and (max-height: 600px) {
+    height: 50vh;
+  }
 `;
 //change this content
 const ModalContent = styled.div`
@@ -92,6 +98,14 @@ const ModalContent = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+  }
+
+  @media screen and (max-width: 999px) {
+    height: 50vh;
+  }
+
+  @media screen and (max-height: 600px) {
+    height: 50vh;
   }
 `;
 

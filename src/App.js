@@ -11,7 +11,15 @@ import About from "./pages/About";
 import Presentation from "./pages/Presentation";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
+import { useWindowSize } from "./Hook/useWindowSize";
+import { useEffect } from "react";
 function App() {
+  const WindowSize = useWindowSize();
+
+  useEffect(() => {
+    console.log(WindowSize.height);
+    console.log(WindowSize.width);
+  }, [WindowSize]);
   return (
     <Router>
       <ThemeProvider theme={color}>
