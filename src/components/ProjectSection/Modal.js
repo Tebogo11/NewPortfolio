@@ -17,7 +17,7 @@ const Background = styled.div`
 
 const ModalWrapper = styled.div`
   width: 80%;
-  height: 95%;
+  height: 80%;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background-color: #202020;
   color: aqua;
@@ -31,18 +31,25 @@ const ModalWrapper = styled.div`
   @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    height: 100%;
   }
 
   @media screen and (max-height: 600px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    height: 100%;
   }
+`;
+
+const VideoWrapper = styled.div`
+  display: flex;
+  background-color: black;
 `;
 
 const ModalVideo = styled.video`
   width: 100%;
-  height: 100%;
   background: #000;
+  align-self: center;
 
   @media screen and (max-width: 999px) {
     height: 50vh;
@@ -59,7 +66,7 @@ const ModalContent = styled.div`
   overflow-y: auto;
   color: whitesmoke;
   margin-bottom: 20px;
-  margin: 10px;
+  margin: 5px;
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -180,18 +187,19 @@ const Modal = ({ showModal, setShowModal, project }) => {
   return (
     <>
       {showModal ? (
-        <Background
-          className="animate__animated animate__slideInDown"
-          ref={modalRef}
-          onClick={classModal}
-        >
-          <ModalWrapper showModal={showModal}>
-            <ModalVideo
-              src={project.videoUrl}
-              controls="controls"
-              autoplay="true"
-              muted
-            />
+        <Background ref={modalRef} onClick={classModal}>
+          <ModalWrapper
+            showModal={showModal}
+            className="animate__animated animate__slideInDown"
+          >
+            <VideoWrapper>
+              <ModalVideo
+                src={project.videoUrl}
+                controls="controls"
+                autoplay="true"
+                muted
+              />
+            </VideoWrapper>
             <ModalContent>
               <h1>{project.title}</h1>
               <p>
