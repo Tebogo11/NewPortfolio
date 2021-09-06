@@ -12,9 +12,10 @@ export const ButtonContainer = styled.div`
   }
 
   &:hover .Button {
-    border: 1px solid ${(props) => props.theme.primary};
+    border: 1px solid #202020;
+    background-color: ${(props) => props.theme.tertiary};
     font-size: 17px;
-    color: ${(props) => props.theme.primary};
+    color: #202020;
   }
 `;
 

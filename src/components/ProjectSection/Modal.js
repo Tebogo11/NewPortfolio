@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useCallback } from "react";
 import styled from "styled-components";
 // src\videos\projects\solentMedcial.mp4
 import { MdClear } from "react-icons/md";
+
 const Background = styled.div`
   width: 100%;
   height: 100%;
@@ -194,7 +195,7 @@ const Modal = ({ showModal, setShowModal, project }) => {
           >
             <VideoWrapper>
               <ModalVideo
-                src={project.videoUrl}
+                src={project.video}
                 controls="controls"
                 autoplay="true"
                 muted
@@ -204,35 +205,41 @@ const Modal = ({ showModal, setShowModal, project }) => {
               <h1>{project.title}</h1>
               <p>
                 <strong>About: </strong>
-                {project.description.About}
+                {project.description.about}
               </p>
               <p>
                 <strong>Why: </strong>
-                {project.description.Why}
+                {project.description.why}
               </p>
               <p>
                 <strong>How: </strong>
-                {project.description.How}
+                {project.description.how}
               </p>
               <h2>Software/Tools</h2>
               <SkillSection>
-                {project.Software.map((item) => {
+                {project.software.map((item) => {
                   return <p>{item}</p>;
                 })}
               </SkillSection>
               <h2>Access</h2>
               <AccessSection>
-                {project.access.map((item) => {
-                  return (
-                    <a
-                      href={item.Link}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      {item.title}
-                    </a>
-                  );
-                })}
+                {project.access?.accessOne?.url !== "" ? (
+                  <a
+                    href={project.access?.accessOne?.url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {project.access?.accessOne?.name}
+                  </a>
+                ) : null}
+
+                <a
+                  href={project.access?.accessTwo?.url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {project.access?.accessTwo?.name}
+                </a>
               </AccessSection>
             </ModalContent>
             <CloseModalButton

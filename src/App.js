@@ -11,15 +11,16 @@ import About from "./pages/About";
 import Presentation from "./pages/Presentation";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
-import { useWindowSize } from "./Hook/useWindowSize";
+import ProjectEdit from "./pages/ProjectEdit";
+import { useDispatch } from "react-redux";
+import { getProjects } from "./store/action/projectA";
 import { useEffect } from "react";
 function App() {
-  const WindowSize = useWindowSize();
-
+  const dispatch = useDispatch();
   useEffect(() => {
-    console.log(WindowSize.height);
-    console.log(WindowSize.width);
-  }, [WindowSize]);
+    dispatch(getProjects());
+  }, [dispatch]);
+
   return (
     <Router>
       <ThemeProvider theme={color}>
@@ -32,6 +33,7 @@ function App() {
               <Route path="/presentations" component={Presentation} exact />
               <Route path="/contact" component={Contact} exact />
               <Route path="/projects" component={Projects} exact />
+              <Route path="/admin" component={ProjectEdit} exact />
             </Switch>
           </div>
         </div>
