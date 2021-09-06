@@ -11,4 +11,9 @@ const reducor = combineReducers({
   projects,
 });
 const store = createStore(reducor, compose(applyMiddleware(thunk)));
-ReactDOM.render(<h1>Hello World</h1>, document.getElementById("root"));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
