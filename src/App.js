@@ -12,8 +12,15 @@ import Presentation from "./pages/Presentation";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import ProjectEdit from "./pages/ProjectEdit";
-
+import { useDispatch } from "react-redux";
+import { getProjects } from "../store/action/projectA";
+import { useEffect } from "react";
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProjects());
+  }, [dispatch]);
+
   return (
     <Router>
       <ThemeProvider theme={color}>
