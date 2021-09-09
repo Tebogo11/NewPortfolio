@@ -113,7 +113,7 @@ const Form = ({ changeScreen, seletedProjectID, setSeletedProjectID }) => {
             rows="4"
             cols="50"
             placeholder="What is this project about"
-            value={projectData?.description?.about}
+            value={projectData.description.about}
             onChange={(e) =>
               setProjectData({
                 ...projectData,
@@ -130,7 +130,7 @@ const Form = ({ changeScreen, seletedProjectID, setSeletedProjectID }) => {
             rows="4"
             cols="25"
             placeholder="Why did you build this project"
-            value={projectData?.description?.why}
+            value={projectData.description.why}
             onChange={(e) =>
               setProjectData({
                 ...projectData,
@@ -147,7 +147,7 @@ const Form = ({ changeScreen, seletedProjectID, setSeletedProjectID }) => {
             rows="4"
             cols="50"
             placeholder="How did you build this project"
-            value={projectData?.description?.how}
+            value={projectData.description.how}
             onChange={(e) =>
               setProjectData({
                 ...projectData,
@@ -175,7 +175,7 @@ const Form = ({ changeScreen, seletedProjectID, setSeletedProjectID }) => {
             <Input
               name="accessOne"
               placeholder="Name"
-              value={projectData?.access?.accessOne?.name}
+              value={projectData.access.accessOne?.name}
               onChange={(e) =>
                 setProjectData({
                   ...projectData,
@@ -192,7 +192,7 @@ const Form = ({ changeScreen, seletedProjectID, setSeletedProjectID }) => {
             <Input
               name="accessOneUrl"
               placeholder="URL"
-              value={projectData?.access?.accessOne?.url}
+              value={projectData.access.accessOne?.url}
               onChange={(e) =>
                 setProjectData({
                   ...projectData,
@@ -211,7 +211,7 @@ const Form = ({ changeScreen, seletedProjectID, setSeletedProjectID }) => {
             <Input
               name="accessTwo"
               placeholder="Name"
-              value={projectData?.access?.accessTwo?.name}
+              value={projectData.access.accessTwo?.name}
               onChange={(e) =>
                 setProjectData({
                   ...projectData,
@@ -228,7 +228,7 @@ const Form = ({ changeScreen, seletedProjectID, setSeletedProjectID }) => {
             <Input
               name="accessTwoUrl"
               placeholder="URL"
-              value={projectData?.access?.accessTwo?.url}
+              value={projectData.access.accessTwo?.url}
               onChange={(e) =>
                 setProjectData({
                   ...projectData,
