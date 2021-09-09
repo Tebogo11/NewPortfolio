@@ -11,19 +11,18 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { deleteProject } from "../../store/action/projectA";
 //icons
-
 import { BiEditAlt } from "react-icons/bi";
 import { RiDeleteBin5Line } from "react-icons/ri";
 const Admin = ({ changeScreen, setSeletedProjectID }) => {
   const projects = useSelector((state) => state.projects);
-  console.log(projects);
+
+  const dispatch = useDispatch();
 
   const handleUpdate = (id) => {
     setSeletedProjectID(id);
     changeScreen("editPage");
   };
 
-  const dispatch = useDispatch();
   const handleDelete = (id) => {
     if (window.confirm("Are you sure")) {
       dispatch(deleteProject(id));

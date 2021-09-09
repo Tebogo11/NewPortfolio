@@ -23,7 +23,6 @@ const CertNav = styled.div`
 `;
 const Certifcate = () => {
   const [currentSelection, setcurrentSelection] = useState(1);
-  console.log(currentSelection);
   const certImages = [WebCertificate, RNCertificate];
   return (
     <div>

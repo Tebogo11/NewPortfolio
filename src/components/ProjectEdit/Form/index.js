@@ -23,6 +23,7 @@ const Form = ({ changeScreen, seletedProjectID }) => {
       ? state.projects.find((p) => p._id === seletedProjectID)
       : null
   );
+
   const [projectData, setProjectData] = useState({
     title: "",
     software: "",
@@ -53,6 +54,7 @@ const Form = ({ changeScreen, seletedProjectID }) => {
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(project);
     if (project) {
       dispatch(updateProject(seletedProjectID, projectData));
     } else {
@@ -172,7 +174,7 @@ const Form = ({ changeScreen, seletedProjectID }) => {
             <Input
               name="accessOne"
               placeholder="Name"
-              value={projectData.access.accessOne.name}
+              value={projectData.access?.accessOne?.name}
               onChange={(e) =>
                 setProjectData({
                   ...projectData,
@@ -189,7 +191,7 @@ const Form = ({ changeScreen, seletedProjectID }) => {
             <Input
               name="accessOneUrl"
               placeholder="URL"
-              value={projectData.access.accessOne.url}
+              value={projectData.access?.accessOne?.url}
               onChange={(e) =>
                 setProjectData({
                   ...projectData,
@@ -208,7 +210,7 @@ const Form = ({ changeScreen, seletedProjectID }) => {
             <Input
               name="accessTwo"
               placeholder="Name"
-              value={projectData.access.accessTwo.name}
+              value={projectData.access?.accessTwo?.name}
               onChange={(e) =>
                 setProjectData({
                   ...projectData,
@@ -225,7 +227,7 @@ const Form = ({ changeScreen, seletedProjectID }) => {
             <Input
               name="accessTwoUrl"
               placeholder="URL"
-              value={projectData.access.accessTwo.url}
+              value={projectData.access?.accessTwo?.url}
               onChange={(e) =>
                 setProjectData({
                   ...projectData,

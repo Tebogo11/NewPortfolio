@@ -40,6 +40,7 @@ export const createProject = (project) => {
 export const updateProject = (id, project) => async (dispatch) => {
   try {
     const { data } = await api.updateProject(id, project);
+    console.log("here", data);
     dispatch({ type: UPDATE, payload: data });
   } catch (error) {
     console.log(error);
