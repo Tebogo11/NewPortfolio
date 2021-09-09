@@ -18,6 +18,7 @@ const ProjectEdit = () => {
       <Form
         changeScreen={setCurrentScreen}
         seletedProjectID={seletedProjectID}
+        setSeletedProjectID={setSeletedProjectID}
       />
     );
   }

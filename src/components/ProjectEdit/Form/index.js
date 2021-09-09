@@ -17,7 +17,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createProject, updateProject } from "../../../store/action/projectA";
 import FileBase from "react-file-base64";
 
-const Form = ({ changeScreen, seletedProjectID }) => {
+const Form = ({ changeScreen, seletedProjectID, setSeletedProjectID }) => {
   const project = useSelector((state) =>
     seletedProjectID
       ? state.projects.find((p) => p._id === seletedProjectID)
@@ -48,6 +48,7 @@ const Form = ({ changeScreen, seletedProjectID }) => {
         accessTwo: { name: "GitHub", url: "" },
       },
     });
+    setSeletedProjectID(0);
     changeScreen("home");
   };
 
