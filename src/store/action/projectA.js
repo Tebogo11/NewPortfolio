@@ -40,8 +40,12 @@ export const createProject = (project) => {
 export const updateProject = (id, project) => async (dispatch) => {
   try {
     const { data } = await api.updateProject(id, project);
-    console.log("here", data);
-    dispatch({ type: UPDATE, payload: data });
+    const unStringfiedData = {
+      ...data,
+      description: JSON.parse(data.description),
+      access: JSON.parse(data.access),
+    };
+    dispatch({ type: UPDATE, payload: unStringfiedData });
   } catch (error) {
     console.log(error);
   }
