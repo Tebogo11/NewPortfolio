@@ -17,12 +17,12 @@ const Home = () => {
       </TitleH1>
       <TitleH1>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <Blast string="web developer" color="white" />
+          <Blast string="A Frontend Dev" color="white" />
         </div>
       </TitleH1>
       <SubTitle>
-        JavaScript Developer | ReactJS Developer | React Native Developer | MERN
-        | NodeJS
+        JavaScript Developer | ReactJS Developer | React Native Developer |
+        NodeJS Developer
       </SubTitle>
       <NavLink to="/contact" style={{ marginLeft: "15px" }}>
         <Button title="Contact Me" />
