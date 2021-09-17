@@ -118,7 +118,7 @@ const Form = ({ changeScreen, seletedProjectID, setSeletedProjectID }) => {
               setProjectData({
                 ...projectData,
                 description: {
-                  ...projectData?.description,
+                  ...projectData.description,
                   about: e.target.value,
                 },
               })

@@ -15,7 +15,7 @@ import {
 
 import Button from "../Button";
 import { CircularProgress } from "@material-ui/core";
-init("user_QTAt9cnRG9Mg9kYo4Fm20");
+init(process.env.REACT_APP_EMAIL_CODE);
 
 const ContactForm = () => {
   const [name, setname] = useState("");

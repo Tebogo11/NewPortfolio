@@ -81,3 +81,9 @@ export const ImageContainer = styled.div`
     font-family: "Merienda", cursive;
   }
 `;
+
+export const Loading = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

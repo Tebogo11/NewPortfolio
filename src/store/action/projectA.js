@@ -18,7 +18,7 @@ export const getProjects = () => {
       });
       dispatch({
         type: FETCH_ALL,
-        payload: unStringfiedData,
+        payload: unStringfiedData.reverse(),
       });
     } catch (error) {
       console.log(error.message);
