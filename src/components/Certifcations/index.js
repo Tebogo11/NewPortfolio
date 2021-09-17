@@ -22,7 +22,7 @@ const CertNav = styled.div`
   }
 `;
 const Certifcate = () => {
-  const [currentSelection, setcurrentSelection] = useState(1);
+  const [currentSelection, setcurrentSelection] = useState(0);
   const certImages = [WebCertificate, RNCertificate];
   return (
     <div>

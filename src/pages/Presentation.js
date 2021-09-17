@@ -1,24 +1,26 @@
 import React from "react";
 import Blast from "../components/Blast";
+import { InfoContainer } from "../components/InfoSectionElements";
 import {
-  InfoRow,
-  Column1,
-  Column2,
-  InfoContainer,
-} from "../components/InfoSectionElements";
-import { SubTitle, ImageContainer } from "../components/PresentationElements";
+  SubTitle,
+  ImageContainer,
+  PresentationDiv,
+} from "../components/PresentationElements";
 import DockerPresentation from "../images/PresentationDocker.PNG";
 import GitHubPresentation from "../images/PresentationGitHub.PNG";
 import { color } from "../constants/Colors";
 const Presentation = () => {
   return (
     <InfoContainer>
-      <h1 className="animate__animated animate__slideInLeft">
+      <h1
+        class="animate__animated animate__fadeIn animate__delay-2s"
+        style={{ textAlign: "center" }}
+      >
         <Blast string="Presentation" color={color.primary} />
       </h1>
-      <InfoRow imgStart={false} className="PresentationContainer">
-        <Column1>
-          <SubTitle>Docker</SubTitle>
+      <PresentationDiv>
+        <div>
+          <SubTitle style={{ textAlign: "center" }}>Docker</SubTitle>
           <ImageContainer>
             <a
               href="https://github.com/Tebogo11/NewPortfolio/blob/main/Docker.pdf"
@@ -34,9 +36,9 @@ const Presentation = () => {
               />
             </a>
           </ImageContainer>
-        </Column1>
-        <Column2>
-          <SubTitle>GitHub</SubTitle>
+        </div>
+        <div>
+          <SubTitle style={{ textAlign: "center" }}>GitHub</SubTitle>
           <ImageContainer>
             <a
               href="https://github.com/Tebogo11/NewPortfolio/blob/main/GitHub%20presentation.pdf"
@@ -52,8 +54,8 @@ const Presentation = () => {
               />
             </a>
           </ImageContainer>
-        </Column2>
-      </InfoRow>
+        </div>
+      </PresentationDiv>
     </InfoContainer>
   );
 };

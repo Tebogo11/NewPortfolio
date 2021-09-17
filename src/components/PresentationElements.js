@@ -1,14 +1,29 @@
 import styled from "styled-components";
 
+export const PresentationDiv = styled.div.attrs({
+  className: "animate__animated animate__pulse",
+})`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transition: all 0.3s ease;
+
+  @media screen and (max-width: 980px) {
+    grid-template-columns: 1fr;
+    transform: all 0.3s ease;
+  }
+`;
+
 export const SubTitle = styled.h1`
   font-size: 24px;
   color: ${(props) => props.theme.tertiary};
+  text-align: center;
+  text-decoration: underline;
 `;
 
 export const ImageContainer = styled.div`
   width: 80%;
   height: 80%;
-  margin-left: 30px;
+  margin-left: 50px;
   background-color: #292929;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24);

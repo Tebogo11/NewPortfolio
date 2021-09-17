@@ -42,12 +42,11 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: #393d46;
-
   outline: none;
 }
 
 .body {
-  margin-top: 80px;
+  margin-top: 30px;
   width: 100%;
   padding-bottom: 30px;
 }

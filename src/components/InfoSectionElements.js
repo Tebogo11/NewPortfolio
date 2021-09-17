@@ -26,7 +26,7 @@ export const Column1 = styled.div.attrs({
 `;
 
 export const Column2 = styled.div.attrs({
-  className: "animate__animated animate__slideInUp",
+  className: "animate__animated animate__slideInUp ",
 })`
   margin-bottom: 15px;
   padding: 0 15px;

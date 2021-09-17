@@ -65,7 +65,7 @@ const FeedBack = () => {
       <div>
         <Textarea
           name="message"
-          placeholder="Please write any extra information, that can help me improve this site"
+          placeholder="[Optional] Please write any extra information, that can help me improve this site."
           onChange={(e) => setmessage(e.target.value)}
         />
 

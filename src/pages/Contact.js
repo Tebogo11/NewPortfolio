@@ -15,13 +15,13 @@ const Contact = () => {
     <InfoContainer>
       <InfoRow>
         <Column1>
-          <h1>
+          <h1 style={{ textAlign: "center" }}>
             <Blast string="Contact Me" color={color.primary} />
           </h1>
           <ContactForm />
         </Column1>
         <Column2>
-          <h1>
+          <h1 style={{ textAlign: "center" }}>
             <Blast string="FeedBack" color={color.primary} />
           </h1>
           <Reviewmsg>

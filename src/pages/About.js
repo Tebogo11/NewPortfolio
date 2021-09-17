@@ -15,8 +15,8 @@ const About = () => {
   return (
     <InfoContainer>
       <InfoRow imgStart={false}>
-        <Column1 style={{ marginBottom: 70 }}>
-          <h1>
+        <Column1>
+          <h1 style={{ textAlign: "center" }}>
             <Blast string="About Me" color={color.primary} />
           </h1>
           <Ptag>

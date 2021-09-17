@@ -21,8 +21,8 @@ const Home = () => {
         </div>
       </TitleH1>
       <SubTitle>
-        JavaScript Developer | ReactJS Developer| React Native Developer | MERN
-        Expert
+        JavaScript Developer | ReactJS Developer | React Native Developer | MERN
+        | NodeJS
       </SubTitle>
       <NavLink to="/contact" style={{ marginLeft: "15px" }}>
         <Button title="Contact Me" />

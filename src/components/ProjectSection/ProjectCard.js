@@ -27,11 +27,18 @@ const ProjectCard = () => {
     return (
       <ProjectContainer>
         {projects.map((project, key) => {
+          let animation = "";
+          if ((key + 1) % 2 === 0) {
+            animation = "animate__animated animate__slideInRight";
+          } else {
+            animation = "animate__animated animate__slideInLeft";
+          }
           return (
             <ImageContainer
               key={key}
               imageUrl={project.image}
               onClick={() => openModal(project._id)}
+              className={animation}
             >
               <div>
                 <h1>{project.title}</h1>
